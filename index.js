@@ -37,9 +37,6 @@ names[name2] = [];
 
 /*____________________________________________________________________________________________*/
 
-let output = 0;
-let word1 = 0;
-let word2 = 0;
 for(let i = 1; i < messages.length; i++) {
 
     let msg = messages[i].substring(22).trimStart();
@@ -64,18 +61,6 @@ for(let i = 1; i < messages.length; i++) {
         msg = messages[i];
         names[name].push(msg);
     }
-
-    // if(msg.toLocaleLowerCase().includes(word.toLocaleLowerCase())) {
-    //     output += 1;
-    // }
-    // if(messages[i].toLocaleLowerCase().includes(word.toLocaleLowerCase()) && messages[i].includes(name1)) {
-    //     word1 += 1;
-    // }
-    // if(messages[i].toLocaleLowerCase().includes(word.toLocaleLowerCase()) && messages[i].includes(name2)) {
-    //     word2 += 1;
-    // }
-    // console.log(messages[i]);
-
 }
 
 /*____________________________________________________________________________________________*/
@@ -116,21 +101,31 @@ console.log(`\n${name2} Emoji frequency:`);
 console.table(name2EmojisSorted);
 
 /*____________________________________________________________________________________________*/
-
+console.log("\n---------------------------------------------\n")
 console.log(`${name1} has sent ${splitter.countGraphemes(name1Emojis)} emojis\n`);
 console.log(`${name2} has sent ${splitter.countGraphemes(name2Emojis)} emojis\n`);
-
+console.log("---------------------------------------------\n")
 /*____________________________________________________________________________________________*/
+
 function countOccurences(string, word) {
     return string.split(word).length - 1;
  }
 
-let wordNum=countOccurences(name1MessagesSent + name2MessagesSent,`${word}`); 
-let wordNum1=countOccurences(name1MessagesSent,`${word}`); 
-let wordNum2=countOccurences(name2MessagesSent,`${word}`); 
+ /*____________________________________________________________________________________________*/
+
+let wordNum = countOccurences(name1MessagesSent + name2MessagesSent,`${word}`); 
+let wordNum1 = countOccurences(name1MessagesSent,`${word}`); 
+let wordNum2 = countOccurences(name2MessagesSent,`${word}`); 
+
+/*____________________________________________________________________________________________*/
 
 console.log(`"${word}" has been said ${wordNum} times\n`);
 console.log(`${name1} has said "${word}" ${wordNum1} times\n`);
 console.log(`${name2} has said "${word}" ${wordNum2} times\n`);
+console.log("---------------------------------------------\n")
 
 console.timeEnd("Time of operation");
+
+console.log("\n---------------------------------------------\n")
+
+/*____________________________________________________________________________________________*/
