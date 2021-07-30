@@ -3,7 +3,7 @@ let fs = require("fs");
 
 console.time("Time of operation");
 
-let text = fs.readFileSync("./Whatsapp chat with Sage.txt", "utf-8");
+let text = fs.readFileSync("./Whatsapp chat with Mika.txt", "utf-8");
 
 let messages = text.split("\n");
 messages.shift();
@@ -13,7 +13,7 @@ messages.shift();
 let name;
 let len;
 let name1 = "Finley Whittington";
-let name2 = "Sage";
+let name2 = "Mika";
 
 let word = "the";
 
