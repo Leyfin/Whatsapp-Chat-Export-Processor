@@ -3,7 +3,7 @@ let fs = require("fs");
 
 console.time("Time of operation");
 
-let text = fs.readFileSync("./chat.txt", "utf-8");
+let text = fs.readFileSync("./Whatsapp chat with Sage.txt", "utf-8");
 
 let messages = text.split("\n");
 messages.shift();
@@ -13,9 +13,9 @@ messages.shift();
 let name;
 let len;
 let name1 = "Finley Whittington";
-let name2 = "Mikal Jayskoos";
+let name2 = "Sage";
 
-let word = "The";
+let word = "the";
 
 /*____________________________________________________________________________________________*/
 
@@ -38,6 +38,8 @@ names[name2] = [];
 /*____________________________________________________________________________________________*/
 
 let output = 0;
+let word1 = 0;
+let word2 = 0;
 for(let i = 1; i < messages.length; i++) {
 
     let msg = messages[i].substring(22).trimStart();
@@ -63,9 +65,17 @@ for(let i = 1; i < messages.length; i++) {
         names[name].push(msg);
     }
 
-    if(msg.toLocaleLowerCase().includes(word.toLocaleLowerCase())) {
-        output += 1
-    }
+    // if(msg.toLocaleLowerCase().includes(word.toLocaleLowerCase())) {
+    //     output += 1;
+    // }
+    // if(messages[i].toLocaleLowerCase().includes(word.toLocaleLowerCase()) && messages[i].includes(name1)) {
+    //     word1 += 1;
+    // }
+    // if(messages[i].toLocaleLowerCase().includes(word.toLocaleLowerCase()) && messages[i].includes(name2)) {
+    //     word2 += 1;
+    // }
+    // console.log(messages[i]);
+
 }
 
 /*____________________________________________________________________________________________*/
@@ -75,7 +85,7 @@ let splitter = new GraphemeSplitter();
 let name1MessagesSent = names[name1].toString();
 let name2MessagesSent = names[name2].toString();
 
-let regex = /[\u0000-\u25ff★✓♪＾ぁ-ゟ]/g;
+let regex = /[\u0000-\u25ff\u4e00-\u9fff\uff00-\uffef\u30a0-\u30ff\ufe00-\ufe0f\u3000-\u303f★✓♪☆︻⟤⟥  ＾☚☞⟣⟢✬♛♡⻝ぁ-ゟ]/g;
 
 let name1Emojis = name1MessagesSent.replace(regex, "");
 let name2Emojis = name2MessagesSent.replace(regex, "");
@@ -88,7 +98,6 @@ function count(s) {
         freq[i] = -~freq[i];
         return freq;
 }
-
 /*____________________________________________________________________________________________*/
 
 name1EmojisSorted = Object.fromEntries(
@@ -112,7 +121,16 @@ console.log(`${name1} has sent ${splitter.countGraphemes(name1Emojis)} emojis\n`
 console.log(`${name2} has sent ${splitter.countGraphemes(name2Emojis)} emojis\n`);
 
 /*____________________________________________________________________________________________*/
+function countOccurences(string, word) {
+    return string.split(word).length - 1;
+ }
 
-console.log(`"${word}" has been said ${output} times\n`);
+let wordNum=countOccurences(name1MessagesSent + name2MessagesSent,`${word}`); 
+let wordNum1=countOccurences(name1MessagesSent,`${word}`); 
+let wordNum2=countOccurences(name2MessagesSent,`${word}`); 
+
+console.log(`"${word}" has been said ${wordNum} times\n`);
+console.log(`${name1} has said "${word}" ${wordNum1} times\n`);
+console.log(`${name2} has said "${word}" ${wordNum2} times\n`);
 
 console.timeEnd("Time of operation");
