@@ -2,20 +2,21 @@ let GraphemeSplitter = require("grapheme-splitter");
 let fs = require("fs");
 
 console.time("Time of operation");
-
-let text = fs.readFileSync("./Whatsapp chat with Mika.txt", "utf-8");
-
-let messages = text.split("\n");
-messages.shift();
-
 /*____________________________________________________________________________________________*/
 
 let name;
 let len;
-let name1 = "";
-let name2 = "";
+let name1 = ""; //Your whatsapp display name 
+let name2 = ""; //The other person in the chat's name
 
-let word = "the";
+let word = "the"; 
+
+/*____________________________________________________________________________________________*/
+
+let text = fs.readFileSync(`./Whatsapp chat with ${name2}.txt`, "utf-8");
+
+let messages = text.split("\n");
+messages.shift();
 
 /*____________________________________________________________________________________________*/
 
