@@ -101,10 +101,12 @@ console.log(`\n${name2} Emoji frequency:`);
 console.table(name2EmojisSorted);
 
 /*____________________________________________________________________________________________*/
+
 console.log("\n---------------------------------------------\n")
 console.log(`${name1} has sent ${splitter.countGraphemes(name1Emojis)} emojis\n`);
 console.log(`${name2} has sent ${splitter.countGraphemes(name2Emojis)} emojis\n`);
 console.log("---------------------------------------------\n")
+
 /*____________________________________________________________________________________________*/
 
 function countOccurences(string, word) {
@@ -113,9 +115,9 @@ function countOccurences(string, word) {
 
  /*____________________________________________________________________________________________*/
 
-let wordNum = countOccurences(name1MessagesSent + name2MessagesSent,`${word}`); 
-let wordNum1 = countOccurences(name1MessagesSent,`${word}`); 
-let wordNum2 = countOccurences(name2MessagesSent,`${word}`); 
+let wordNum = countOccurences(name1MessagesSent.toLocaleLowerCase() + name2MessagesSent.toLocaleLowerCase(),`${word}`); 
+let wordNum1 = countOccurences(name1MessagesSent.toLocaleLowerCase(),`${word}`); 
+let wordNum2 = countOccurences(name2MessagesSent.toLocaleLowerCase(),`${word}`); 
 
 /*____________________________________________________________________________________________*/
 
