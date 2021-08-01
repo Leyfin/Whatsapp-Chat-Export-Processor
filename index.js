@@ -12,8 +12,8 @@ messages.shift();
 
 let name;
 let len;
-let name1 = "Finley Whittington";
-let name2 = "Mika";
+let name1 = "";
+let name2 = "";
 
 let word = "the";
 
