@@ -6,8 +6,8 @@ console.time("Time of operation");
 
 let name;
 let len;
-let name1 = ""; //Your whatsapp display name 
-let name2 = ""; //The other person in the chat's name
+let name1 = "Person 1"; //Your whatsapp display name 
+let name2 = "Person 2"; //The other person in the chat's name
 
 let word = "the"; 
 
