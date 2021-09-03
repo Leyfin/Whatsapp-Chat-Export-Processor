@@ -24,7 +24,7 @@ if(messages[0].includes(name1)) {
     len = name1.length;
 }
 else if(messages[0].includes(name2)) {
-    len = name2.length
+    len = name2.length;
 }
 
 let firstMessageAuthor = messages[0].substring(22, 23+len).trim();
@@ -103,10 +103,10 @@ console.table(name2EmojisSorted);
 
 /*____________________________________________________________________________________________*/
 
-console.log("\n---------------------------------------------\n")
+console.log("\n---------------------------------------------\n");
 console.log(`${name1} has sent ${splitter.countGraphemes(name1Emojis)} emojis\n`);
 console.log(`${name2} has sent ${splitter.countGraphemes(name2Emojis)} emojis\n`);
-console.log("---------------------------------------------\n")
+console.log("---------------------------------------------\n");
 
 /*____________________________________________________________________________________________*/
 
@@ -125,10 +125,10 @@ let wordNum2 = countOccurences(name2MessagesSent.toLocaleLowerCase(),`${word}`);
 console.log(`"${word}" has been said ${wordNum} times\n`);
 console.log(`${name1} has said "${word}" ${wordNum1} times\n`);
 console.log(`${name2} has said "${word}" ${wordNum2} times\n`);
-console.log("---------------------------------------------\n")
+console.log("---------------------------------------------\n");
 
 console.timeEnd("Time of operation");
 
-console.log("\n---------------------------------------------\n")
+console.log("\n---------------------------------------------\n");
 
 /*____________________________________________________________________________________________*/
