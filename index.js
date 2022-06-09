@@ -10,7 +10,8 @@ console.time("Time of operation");
 let name1 = "Person 1"; //Your whatsapp display name 
 let name2 = "Person 2"; //The other person in the chat's name
 
-let word = "ok";  //The word/character you wish to know the count of(can also be a sentence)
+let word = "Ok";  //The word/character you wish to know the count of(can also be a sentence)
+word = word.toLocaleLowerCase();
 
 let clock = 0; //Set this to 3 if you use a 24hr clock, and 0 if you don't
 
@@ -136,6 +137,7 @@ let name2_words = name2MessagesSent.split(" ").length
 
 let name1MessagesSentNum = names[name1].length;
 let name2MessagesSentNum = names[name2].length;
+
 console.log(`"${word}" has been said ${wordNum} times\n`);
 console.log(`${name1} has said "${word}" ${wordNum1} times\n`);
 console.log(`${name2} has said "${word}" ${wordNum2} times\n`);
@@ -150,7 +152,7 @@ console.log("---------------------------------------------\n");
 
 console.log(`${name1} has sent ${name1MessagesSentNum} messages\n`);
 console.log(`${name2} has sent ${name2MessagesSentNum} messages\n`);
-console.log(`A total of ${name1MessagesSentNum+name2MessagesSentNum} messages have been sent\n`)
+console.log(`A total of ${name1MessagesSentNum+name2MessagesSentNum} messages have been sent\n`);
 
 console.log("---------------------------------------------\n");
 
