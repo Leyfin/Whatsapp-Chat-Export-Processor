@@ -10,7 +10,7 @@ console.time("Time of operation");
 let name1 = "Person 1"; //Your whatsapp display name 
 let name2 = "Person 2"; //The other person in the chat's name
 
-let word = "the";  //The word/character you wish to know the count of(can also be a sentence)
+let word = "ok";  //The word/character you wish to know the count of(can also be a sentence)
 
 let clock = 0; //Set this to 3 if you use a 24hr clock, and 0 if you don't
 
@@ -36,6 +36,7 @@ else if(messages[0].includes(name2)) {
 let firstMessageAuthor = messages[0].substring(22-clock, 23+len-clock).trim();
 name = firstMessageAuthor;
 
+
 /*____________________________________________________________________________________________*/
 
 let names = {}; 
@@ -46,8 +47,8 @@ names[name2] = [];
 
 for(let i = 1; i < messages.length; i++) {
 
-    let msg = messages[i].substring(22).trimStart();
-    if(msg.includes("(file attached)")) {
+    let msg = messages[i].substring(22-clock).trimStart();
+    if(msg.includes("(file attached)") || msg.includes("<Media Omitted>")) {
         continue;
     }
 
