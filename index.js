@@ -48,7 +48,7 @@ names[name2] = [];
 for(let i = 1; i < messages.length; i++) {
 
     let msg = messages[i].substring(22-clock).trimStart();
-    if(msg.includes("(file attached)") || msg.includes("<Media Omitted>")) {
+    if(msg.includes("(file attached)") || msg.includes("<Media omitted>")) {
         continue;
     }
 

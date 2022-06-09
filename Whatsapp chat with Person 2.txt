@@ -9,7 +9,7 @@ Person 1, I have now also sent an image🇦🇸
 04/07/2021, 12:17 am - Person 1: That image is substantially more interesting than my image
 04/07/2021, 12:18 am - Person 2: Yes indeed it is
 04/07/2021, 12:19 am - Person 2: Let us now converse in multiple languages
-04/07/2021, 12:19 am - Person 2: <Media Omitted>
+04/07/2021, 12:19 am - Person 2: <Media omitted>
 04/07/2021, 12:19 am - Person 1: Ok Agreed, we should do this ok
 04/07/2021, 12:19 am - Person 2: Ok Þetta er hrífandi samtal ok
 04/07/2021, 12:19 am - Person 1: Потпуно се слажем
