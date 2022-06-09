@@ -10,7 +10,7 @@ console.time("Time of operation");
 let name1 = "Person 1"; //Your whatsapp display name 
 let name2 = "Person 2"; //The other person in the chat's name
 
-let word = "Ok";  //The word/character you wish to know the count of(can also be a sentence)
+let word = "The";  //The word/character you want to know the count of(can also be a sentence)
 word = word.toLocaleLowerCase();
 
 let clock = 0; //Set this to 3 if you use a 24hr clock, and 0 if you don't
