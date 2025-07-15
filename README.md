@@ -1,0 +1,1 @@
+The base of this technically works but I think whatsapp has since changed the way they export chats at some point, and the counting words function always seems to be ever so slightly, off and I can't work it out for the life of me so it's kinda useless precision wise. Also I was much worse at coding when I wrote this lol. I should probably just rewrite this in python
